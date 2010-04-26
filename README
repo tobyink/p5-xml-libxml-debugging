@@ -20,14 +20,14 @@ DESCRIPTION
 
       <foo xmlns="http://example.com/1"
            xmlns:bar="http://example.com/2"
-                     bar:baz="quux" />
+           bar:baz="quux" />
 
     Might be represented as:
 
       <{http://example.com/1}foo
            {http://www.w3.org/2000/xmlns/}XMLNS="http://example.com/1"
            {http://www.w3.org/2000/xmlns/}bar="http://example.com/2"
-                     {http://example.com/2}baz="quux" />
+           {http://example.com/2}baz="quux" />
 
     Another method "toDebuggingHash" returns a hashref suitable for dumping
     using Data::Dumper.
