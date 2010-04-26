@@ -1,0 +1,31 @@
+---
+abstract: 'get debugging information from XML::LibXML nodes'
+author:
+  - 'Toby Inkster <tobyink@cpan.org>'
+build_requires:
+  ExtUtils::MakeMaker: 6.42
+  Test::More: 0.61
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
+distribution_type: module
+generated_by: 'Module::Install version 0.91'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: XML-LibXML-Debugging
+no_index:
+  directory:
+    - inc
+    - t
+requires:
+  HTML::Entities: 3.27
+  Locale::Country: 1.06
+  XML::LibXML: 0
+  perl: 5.8.0
+resources:
+  bugtracker: http://rt.cpan.org/Dist/Display.html?Queue=XML-LibXML-Debugging
+  homepage: http://search.cpan.org/dist/XML-LibXML-Debugging/
+  license: http://dev.perl.org/licenses/
+  repository: http://goddamn.co.uk/viewvc/perlmods/XML-LibXML-Debugging/
+version: 0.04
