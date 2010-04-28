@@ -17,7 +17,6 @@ license             'perl';
 test_requires       'Test::More'        => '0.61';
 
 requires            'HTML::Entities'    => '3.27';
-requires            'Locale::Country'   => '1.06';
 requires            'XML::LibXML'       => 0;
 
 resources(
