@@ -1,17 +1,15 @@
 package XML::LibXML::Debugging;
 
 use 5.008;
-use strict;
-use warnings;
 use base qw(XML::LibXML);
+use strict;
 
-our $VERSION = '0.04';
+use HTML::Entities qw(encode_entities_numeric);
+use XML::LibXML qw(:all);
 
-1;
+our $VERSION = '0.100';
 
-package XML::LibXML::Document;
-
-sub toDebuggingHash
+sub XML::LibXML::Document::toDebuggingHash
 {
 	my $n = shift;
 	
@@ -21,19 +19,13 @@ sub toDebuggingHash
 		};
 }
 
-sub toClarkML
+sub XML::LibXML::Document::toClarkML
 {
 	my $n = shift;
 	$n->documentElement->toClarkML;
 }
 
-1;
-
-package XML::LibXML::Element;
-
-use HTML::Entities qw(encode_entities_numeric);
-
-sub toDebuggingHash
+sub XML::LibXML::Element::toDebuggingHash
 {
 	my $n = shift;
 	
@@ -73,7 +65,7 @@ sub toDebuggingHash
 	return $rv;
 }
 
-sub toClarkML
+sub XML::LibXML::Element::toClarkML
 {
 	my $n = shift;
 	
@@ -130,11 +122,7 @@ sub toClarkML
 	return $rv;
 }
 
-1;
-
-package XML::LibXML::Comment;
-
-sub toDebuggingHash
+sub XML::LibXML::Comment::toDebuggingHash
 {
 	my $n = shift;
 	
@@ -144,19 +132,13 @@ sub toDebuggingHash
 		};
 }
 
-sub toClarkML
+sub XML::LibXML::Comment::toClarkML
 {
 	my $n = shift;
 	return "<!--" . $n->nodeValue . "-->";
 }
 
-1;
-
-package XML::LibXML::Attr;
-
-use XML::LibXML qw(:all);
-
-sub toDebuggingHash
+sub XML::LibXML::Attr::toDebuggingHash
 {
 	my $n = shift;
 	
@@ -182,7 +164,7 @@ sub toDebuggingHash
 		};
 }
 
-sub toClarkML
+sub XML::LibXML::Attr::toClarkML
 {
 	my $n = shift;
 
@@ -209,30 +191,22 @@ sub toClarkML
 	}
 }
 
-1;
-
-package XML::LibXML::Node;
-
-sub toClarkML
+sub XML::LibXML::Node::toClarkML
 {
 	return '';
 }
 
-sub toDebuggingHash
+sub XML::LibXML::Node::toDebuggingHash
 {
 	return {type=>'Node'};
 }
 
-1;
-
-package XML::LibXML::Namespace;
-
-sub toClarkML
+sub XML::LibXML::Namespace::toClarkML
 {
 	return XML::LibXML::Attr::toClarkML(@_);
 }
 
-sub toDebuggingHash
+sub XML::LibXML::Namespace::toDebuggingHash
 {
 	return XML::LibXML::Attr::toDebuggingHash(@_);
 }
@@ -244,10 +218,6 @@ __END__
 =head1 NAME
 
 XML::LibXML::Debugging - get debugging information from XML::LibXML nodes
-
-=head1 VERISON
-
-0.04
 
 =head1 SYNOPSIS
 
@@ -292,10 +262,9 @@ Toby Inkster E<lt>tobyink@cpan.orgE<gt>.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2009-2010 by Toby Inkster
+Copyright (C) 2009-2011 by Toby Inkster
 
 This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8 or,
-at your option, any later version of Perl 5 you may have available.
+it under the same terms as Perl itself.
 
 =cut

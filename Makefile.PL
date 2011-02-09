@@ -14,9 +14,9 @@ readme_from         $fn;
 author              'Toby Inkster <tobyink@cpan.org>';
 license             'perl';
 
-test_requires       'Test::More'        => '0.61';
-
 requires            'HTML::Entities'    => '3.27';
+test_requires       'Module::Signature' => '0.66';
+test_requires       'Test::More'        => '0.61';
 requires            'XML::LibXML'       => 0;
 
 resources(
