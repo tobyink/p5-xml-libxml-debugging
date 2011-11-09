@@ -1,7 +1,7 @@
 package XML::LibXML::Debugging;
 
 use 5.008;
-use base qw(XML::LibXML);
+use parent qw(XML::LibXML);
 use strict;
 
 use HTML::Entities qw(encode_entities_numeric);
