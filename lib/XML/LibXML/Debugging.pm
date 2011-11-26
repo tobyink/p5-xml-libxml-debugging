@@ -7,7 +7,10 @@ use strict;
 use HTML::HTML5::Entities qw(encode_entities_numeric);
 use XML::LibXML qw(:all);
 
-our $VERSION = '0.101';
+BEGIN {
+	$XML::LibXML::Debugging::AUTHORITY = 'cpan:TOBYINK';
+	$XML::LibXML::Debugging::VERSION   = '0.101';
+}
 
 sub XML::LibXML::Document::toDebuggingHash
 {

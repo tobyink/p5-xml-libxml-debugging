@@ -24,7 +24,7 @@ my:project
 	:created        "2010-04-26"^^xsd:date ;
 	:license        <http://dev.perl.org/licenses/> ;
 	:category
-		[ rdfs:label "XML" ] ;
+		[ rdfs:label "XML" ] ,
 		[ rdfs:label "Debugging" ] .
 		
 
