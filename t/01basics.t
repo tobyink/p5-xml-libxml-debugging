@@ -10,7 +10,7 @@ $root->setAttribute('xml:lang', 'en-gb-oed');
 
 is(
 	$doc->toClarkML,
-	'<{http://www.w3.org/1999/xhtml}html {http://www.w3.org/XML/1998/namespace}lang="en-gb-oed" {http://www.w3.org/2000/xmlns/}XMLNS="http://www.w3.org/1999/xhtml"/>',
+	'<{http://www.w3.org/1999/xhtml}html {http://www.w3.org/XML/1998/namespace}lang="en-gb-oed" {http://www.w3.org/2000/xmlns/}xmlns="http://www.w3.org/1999/xhtml"/>',
 	"toClarkML seems to be working.");
 
 my $correct = {
@@ -34,7 +34,7 @@ my $correct = {
                                           'nsuri' => 'http://www.w3.org/2000/xmlns/',
                                           'suffix' => undef,
                                           'qname' => 'xmlns',
-                                          'type' => 'Attribute (XMLNS)',
+                                          'type' => 'Namespace Declaration',
                                           'prefix' => 'xmlns'
                                         }
                                       ],
