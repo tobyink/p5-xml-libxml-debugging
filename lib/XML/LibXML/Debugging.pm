@@ -4,10 +4,10 @@ use 5.008;
 use parent qw(XML::LibXML);
 use strict;
 
-use HTML::Entities qw(encode_entities_numeric);
+use HTML::HTML5::Entities qw(encode_entities_numeric);
 use XML::LibXML qw(:all);
 
-our $VERSION = '0.100';
+our $VERSION = '0.101';
 
 sub XML::LibXML::Document::toDebuggingHash
 {
@@ -241,7 +241,7 @@ string of XML-like markup with explicit namespaces. The following XML:
 Might be represented as:
 
   <{http://example.com/1}foo
-       {http://www.w3.org/2000/xmlns/}XMLNS="http://example.com/1"
+       {http://www.w3.org/2000/xmlns/}xmlns="http://example.com/1"
        {http://www.w3.org/2000/xmlns/}bar="http://example.com/2"
        {http://example.com/2}baz="quux" />
 
@@ -266,5 +266,11 @@ Copyright (C) 2009-2011 by Toby Inkster
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
+
+=head1 DISCLAIMER OF WARRANTIES
+
+THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 =cut
