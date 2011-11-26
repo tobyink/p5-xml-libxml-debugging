@@ -145,7 +145,7 @@ sub XML::LibXML::Attr::toDebuggingHash
 	if ($n->nodeType == XML_NAMESPACE_DECL)
 	{
 		return {
-			'type'    => 'Attribute (XMLNS)',
+			'type'    => 'Namespace Declaration',
 			'qname'   => $n->nodeName,
 			'prefix'  => $n->prefix,
 			'suffix'  => $n->getLocalName,
@@ -175,7 +175,7 @@ sub XML::LibXML::Attr::toClarkML
 			return sprintf("{%s}%s=\"%s\"",
 				$n->getNamespaceURI, $n->getLocalName, $n->getData);
 		}
-		return sprintf("{%s}XMLNS=\"%s\"",
+		return sprintf("{%s}xmlns=\"%s\"",
 			$n->getNamespaceURI, $n->getData);
 	}
 	
