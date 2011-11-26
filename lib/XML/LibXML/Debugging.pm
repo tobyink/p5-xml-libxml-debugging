@@ -254,7 +254,8 @@ Please report any bugs to L<http://rt.cpan.org/>.
 
 =head1 SEE ALSO
 
-L<XML::LibXML>.
+L<XML::LibXML>,
+L<XML::LibXML::Debugging>.
 
 =head1 AUTHOR
 
