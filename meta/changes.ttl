@@ -14,12 +14,10 @@ my:v_0-04
 	:revision       "0.04"^^xsd:string ;
 	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-LibXML-Debugging-0.04.tar.gz> ;
 	rdfs:label      "Fork from HTML-HTML5-Sanity."@en ;
-	dcs:changeset
-	[
-		a dcs:ChangeSet ;
+	dcs:changeset [
 		dcs:versus <http://purl.org/NET/cpan-uri/dist/HTML-HTML5-Sanity/v_0-03> ;
-		dcs:item [ rdfs:label "Split the to_hashref and to_clarkml functions out into a separate distribution."@en ] ;
-		dcs:item [ rdfs:label "Make functions into object methods."@en ] 
+		dcs:item   [ rdfs:label "Split the to_hashref and to_clarkml functions out into a separate distribution."@en ] ;
+		dcs:item   [ rdfs:label "Make functions into object methods."@en ] 
 	] .
 
 my:project :release my:v_0-100 .
@@ -29,12 +27,10 @@ my:v_0-100
 	:revision       "0.100"^^xsd:string ;
 	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-LibXML-Debugging-0.100.tar.gz> ;
 	rdfs:label      "We're not dead yet!"@en ;
-	dcs:changeset
-	[
-		a dcs:ChangeSet ;
+	dcs:changeset [
 		dcs:versus my:v_0-04 ;
-		dcs:item [ rdfs:label "Minor refactoring."@en ] ;
-		dcs:item [ rdfs:label "Copyright 2011."@en ; a dcs:Update , dcs:Documentation ]
+		dcs:item   [ rdfs:label "Minor refactoring."@en ] ;
+		dcs:item   [ rdfs:label "Copyright 2011."@en ; a dcs:Update , dcs:Documentation ]
 	] .
 
 my:project :release my:v_0-101 .
@@ -43,12 +39,21 @@ my:v_0-101
 	dc:issued       "2011-11-26"^^xsd:date ;
 	:revision       "0.101"^^xsd:string ;
 	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-LibXML-Debugging-0.101.tar.gz> ;
-	dcs:changeset
-	[
-		a dcs:ChangeSet ;
+	dcs:changeset [
 		dcs:versus my:v_0-100 ;
-		dcs:item [ rdfs:label "Switch from HTML::Entities to HTML::HTML5::Entities."@en ] ;
-		dcs:item [ rdfs:label "Include small example script."@en ; a dcs:Packaging ] ;
-		dcs:item [ rdfs:label "Slightly different output for @xmlns in Clark notation."@en ] ;
-		dcs:item [ rdfs:label "Module::Package::RDF"@en ; a dcs:Packaging ]
+		dcs:item   [ rdfs:label "Switch from HTML::Entities to HTML::HTML5::Entities."@en ] ;
+		dcs:item   [ rdfs:label "Include small example script."@en ; a dcs:Packaging ] ;
+		dcs:item   [ rdfs:label "Slightly different output for @xmlns in Clark notation."@en ] ;
+		dcs:item   [ rdfs:label "Module::Package::RDF"@en ; a dcs:Packaging ]
+	] .
+
+my:project :release my:v_0-102 .
+my:v_0-102
+	a               :Version ;
+	dc:issued       "2011-12-04"^^xsd:date ;
+	:revision       "0.102"^^xsd:string ;
+	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-LibXML-Debugging-0.102.tar.gz> ;
+	dcs:changeset [
+		dcs:versus my:v_0-101 ;
+		dcs:item   [ rdfs:label "Newer version of Module::Package::RDF."@en ; a dcs:Packaging , dcs:Bugfix ]
 	] .
