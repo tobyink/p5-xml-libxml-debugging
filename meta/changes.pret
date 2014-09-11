@@ -57,3 +57,10 @@ my:v_0-102
 		dcs:versus my:v_0-101 ;
 		dcs:item   [ rdfs:label "Newer version of Module::Package::RDF."@en ; a dcs:Packaging , dcs:Bugfix ]
 	] .
+
+`XML-LibXML-Debugging 0.103 cpan:TOBYINK`
+	issued    2014-09-11;
+	changeset [
+		item "Switch to Dist::Inkt."^^Packaging;
+	].
+

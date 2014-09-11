@@ -9,7 +9,7 @@ use XML::LibXML qw(:all);
 
 BEGIN {
 	$XML::LibXML::Debugging::AUTHORITY = 'cpan:TOBYINK';
-	$XML::LibXML::Debugging::VERSION   = '0.102';
+	$XML::LibXML::Debugging::VERSION   = '0.103';
 }
 
 sub XML::LibXML::Document::toDebuggingHash
