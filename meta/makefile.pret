@@ -1,0 +1,8 @@
+@prefix deps:  <http://ontologi.es/doap-deps#> .
+
+<http://purl.org/NET/cpan-uri/dist/XML-LibXML-Debugging/project>
+	deps:runtime-requirement         [ deps:on "HTML::HTML5::Entities"^^deps:CpanId ];
+	deps:runtime-requirement         [ deps:on "XML::LibXML"^^deps:CpanId ];
+	deps:runtime-requirement         [ deps:on "parent"^^deps:CpanId ];
+	deps:test-requirement            [ deps:on "Test::More 0.61"^^deps:CpanId ].
+
